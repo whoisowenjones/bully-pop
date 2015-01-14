@@ -41,8 +41,10 @@
 
   </style>
   <script type="text/javascript" charset="utf-8">
-console.log(window.parent.$);
-    //document.addEventListener("ready", app.initFeatureButton(), false);
+    window.$ = window.parent.$;
+    $(document).ready(function() {
+      window.parent.app.initFeatureButton();
+    });
   </script>
 </head>
 
