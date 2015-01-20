@@ -82,7 +82,18 @@
       color: #fff;
       text-transform: uppercase;
       font-size: 4em;
+      font-weight: 300;
+      margin-top: 0;
       margin-bottom: .2em;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-family: "myriad-pro", "Arial", sans-serif;
+      font-size: 1.7em;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 0;
     }
 
     p {
@@ -122,6 +133,37 @@
     }
 
     @media only screen and (max-width: 900px) {
+      #left {
+        padding-left: 0;
+          margin-top: 0;
+      }
+
+      #left img {
+        display: none;
+      }
+
+      #left img:first-child {
+        width: 105px;
+        height: 85px;
+        display: block;
+      }
+
+      #right {
+        float: none;
+        position: absolute;
+        top: 0;
+        margin-left: 0 !important;
+      }
+
+      #right #heading {
+        margin-top: 50px;
+        margin-left: 115px;
+      }
+
+      #copy {
+        padding-top: 1em;
+      }
+
       #close {
         margin-top: -1.8em;
       }
@@ -138,11 +180,21 @@
     </div>
 
     <div id="right">
-      <h2>Sed sem sapiem</h2>
-      <p>
-      Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
-      </p>
-      <a class="btn" href="#">Lorem Ipsum</a>
+      <div id="heading">
+        <h3>Featured Artist</h3>
+        <h2>Jane Doe</h2>
+      </div>
+      <div id="copy">
+        <p>
+            Sed sem sapien, sollicitudin in, rutrum vel, elementum id, ante. Sed faucibus ultricies odio. Duis iaculis sem a ante. Curabitur posuere porta sapien. Vivamus dolor purus, imperdiet sed, pretium nec, convallis sit amet, libero. Ut congue. Curabitur dapibus, sem vel gravida accumsan.
+        </p>
+        <p>
+            Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus in magna ac est malesuada ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+        <p>
+          — From The Bully project website: http://www.thebullyproject.com/about_the_bully_project
+        </p>
+      </div>
     </div>
 
 
