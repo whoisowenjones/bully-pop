@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css" media="screen">
     @font-face {
       font-family: "myriad-pro-condensed";
@@ -28,21 +29,40 @@
 
     #container {
       position: relative;
-      background: #171717 url('images/background.jpg') 50% 0% no-repeat;
+      background: #000;
       width: 100%;
       max-width: 948px;
-      height: 316px;
+      min-height: 475px;
       border-top: 1px solid #171717;
-      padding-top: 3em;
+      border-left: 8px solid #171717;
+      border-right: 8px solid #171717;
+      border-bottom: 8px solid #171717;
+      padding-top: 30px;
     }
 
     #left {
-      width: 50%;
-      width: 474px;
-      text-align: center;
       float: left;
-      padding-left: 8em;
-      padding-right: 8em;
+      width: 233px;
+      max-width: 233px;
+      height: 190px;
+      margin-left: 2em;
+      margin-right: 2em;
+    }
+
+    #left img {
+      width: 233px;
+      height: 190px;
+      margin-bottom: 30px;
+    }
+
+    #right {
+      text-align: center;
+      margin-left: 290px;
+    }
+
+    a {
+      color: #1086FF;
+      text-decoration: none;
     }
 
     h2 {
@@ -50,7 +70,18 @@
       color: #fff;
       text-transform: uppercase;
       font-size: 4em;
+      font-weight: 300;
+      margin-top: 0;
       margin-bottom: .2em;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-family: "myriad-pro", "Arial", sans-serif;
+      font-size: 1.7em;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 0;
     }
 
     p {
@@ -59,18 +90,15 @@
       font-size: 1.6em;
     }
 
-    a {
-      color: #fff;
-    }
-
     a.btn {
+      color: #fff;
       display: inline-block;
       font-size: 1.4em;
       font-family: "myriad-pro", "Arial", sans-serif;
       border-radius: 5px;
-      background: #1976dd;
+      background: #1086FF;
       text-transform: uppercase;
-      margin-top: .5em;
+      margin-top: 1em;
       margin-left: auto;
       margin-right: auto;
       padding: .5em 1em;
@@ -89,18 +117,100 @@
       cursor: pointer;
     }
 
+    @media only screen and (max-width: 900px) {
+      #container {
+        width: 100%;
+        height: 380px;
+        padding-top: 5em;
+      }
+
+      #left {
+        width: auto;
+        float: none;
+        padding-left: 0;
+        margin-top: 0;
+      }
+
+      #left img {
+        display: none;
+      }
+
+      #left img:first-child {
+        width: 105px;
+        height: 85px;
+        display: block;
+      }
+
+      #right {
+        float: none;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        margin-left: 0 !important;
+      }
+
+      #right #heading {
+        margin-left: 70px;
+        width: 100%;
+      }
+
+      #right #heading h3 {
+        margin-top: 0;
+        width: 100%;
+      }
+
+      #right #heading h2 {
+        width: 100%;
+      }
+
+      #right #copy {
+        padding-top: 1em;
+        width: 100%;
+      }
+
+      #close {
+        margin-top: -1.8em;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      #container {
+        font-size: .85em;
+      }
+
+      #container a {
+        width: 100%;
+        word-wrap: break-word;
+      }
+    }
+
   </style>
 </head>
-<body data-show="false" data-height="315px">
+<body data-show="false" data-height="475px" data-mobile-height="464px">
   <div id="container">
     <div id="close">X</div>
     <div id="left">
-      <h2>Sed sem sapiem</h2>
-      <p>
-      Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
-      </p>
-      <a class="btn" href="#">Lorem Ipsum</a>
+      <img src="images/artist_pic.jpg">
+      <img src="images/artist_work.jpg">
     </div>
+
+    <div id="right">
+      <div id="heading">
+        <h3>Featured Artist</h3>
+        <h2>Jane Doe</h2>
+      </div>
+      <div id="copy">
+        <p>
+            Sed sem sapien, sollicitudin in, rutrum vel, elementum id, ante. Sed faucibus ultricies odio. Duis iaculis sem a ante. Curabitur posuere porta sapien. Vivamus dolor purus, imperdiet sed, pretium nec, convallis sit amet, libero. Ut congue. Curabitur dapibus, sem vel gravida accumsan.
+        </p>
+        <p>
+            Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus in magna ac est malesuada ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+        <p>
+        — From The Bully project website:<br/><a href="http://www.thebullyproject.com/about_the_bully_project">http://www.thebullyproject.com/about_the_bully_project</a>
+        </p>
+      </div>
+    </div>
+
 
   </div>
 </body>
